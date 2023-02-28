@@ -1,0 +1,110 @@
+/*This is the style for the sign up page*/
+*{
+    background-color: white;
+}
+
+
+body{
+    overflow-y: hidden;
+   display: grid;
+   flex-direction: row;
+   place-items: center;
+   
+}
+.fa-twitter{
+    color:blue;
+    margin:  auto;
+    margin-top: 15px;
+    margin-bottom:25px;
+      }
+.signup-container{
+    max-width:475px;
+    padding-inline: 20px;
+    display: grid;
+    
+   }
+
+
+.signup-container h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+
+}
+.ori-zontal{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.ori-zontal img{
+    width:46%;
+margin-inline: 8px;
+}
+
+.bars button{
+    width: 100%;
+    border-radius: 60px;
+    cursor:pointer;
+    padding-block:8px;
+}
+
+#apple-line{
+    font-weight: 900;
+}
+
+.topbars-container {
+    display: grid;
+    row-gap: 10px;
+}
+
+.signup-container p{
+    margin-block: 10px 30px;
+}
+
+.ori-zontal h2{
+    position: absolute;
+    transform: translateY(90%);
+    
+}
+
+a{
+    text-decoration: none;
+    font-weight: 400;
+    color: skyblue;
+}
+
+@media (min-width:768px){
+    section{
+        border: 10px solid white;
+        color: white;
+        flex-grow: 4;
+    }
+
+    body{
+        background-color: grey;
+    }
+
+    .signup-container{
+        scale:1.4;
+        max-width: 400px;
+        padding-bottom: 80px;
+        background-color: white;
+        color: white;
+        border-radius: 20px;
+    }
+.fa-twitter{
+    margin-top:15px;
+}
+      
+    h2, p{
+        color: grey;
+    }
+}
+
+@media (min-width:1750px){
+    .signup-container{
+    flex-grow: 4;
+    scale:2.5;
+    }
+}
