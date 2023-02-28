@@ -1,4 +1,4 @@
-/*This is the style for the sign up page*/
+/*This is the style for the login/create account page*/
 *{
     background-color: white;
 }
@@ -55,11 +55,25 @@ margin-inline: 8px;
     font-weight: 900;
 }
 
-.topbars-container {
+.topbars-container { /*This is to create space between the two buttons*/
     display: grid;
-    row-gap: 10px;
+    row-gap: 20px;
+}
+.bottombars-container {/*This is to create space between the two buttons*/
+    display: grid;
+    row-gap: 20px;
+}
+form{
+    margin-top: 15px;
+      
 }
 
+form input{
+    padding-block: 10px;
+    width: 100%;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+}
 .signup-container p{
     margin-block: 10px 30px;
 }
@@ -76,11 +90,15 @@ a{
     color: skyblue;
 }
 
+.bottom-line{ /*This allows me to create space for the last element at at the bottom*/
+    margin-top:36px;
+}
 .one{/*This enables me to set a black background for this particlar button*/
-    background-color: black;
-    color:white;
-    font-weight: 700;
-    }
+background-color: black;
+color:white;
+font-weight: 700;
+}
+
 @media (min-width:768px){ /*for larger screen sizes*/
     section{
         border: 10px solid white;
@@ -93,7 +111,7 @@ a{
     }
 
     .signup-container{
-        scale:1.4;
+        scale:1.3;
         max-width: 400px;
         padding-bottom: 80px;
         background-color: white;
@@ -112,6 +130,6 @@ a{
 @media (min-width:1750px){
     .signup-container{
     flex-grow: 4;
-    scale:2.5;
+    scale:2.4;
     }
 }
