@@ -10,8 +10,8 @@ bar.classList.add('special');
 const loginBarContainer = document.querySelector('.loginBarContainer');
 
 loginDetail.value= localStorage.data; /*The value of localStorage is globally accessible*/
-const passwordLabel= document.querySelector('.passwordLabel');
-passwordLabel.classList.add('blind');
+//const passwordLabel= document.querySelector('.passwordLabel');
+//passwordLabel.classList.add('blind');
  
 
 
