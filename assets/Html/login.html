@@ -13,6 +13,7 @@
 <script src="https://kit.fontawesome.com/5b26c2cd27.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="../Style/reset.css">    
 <link rel="stylesheet" type="text/css" href="../Style/style-2.css">
+
 </head>
 <body>
     
@@ -21,26 +22,33 @@
         <div class="signup-container">
             <i class="fa-brands fa-twitter"></i>
     
-            <h1>Join Twitter today</h1>
+            <h1>Sign in To Twitter</h1>
     
             <div class="topbars-container">
-       <div class="bars"><a href="#"><button><span><i class="fa-brands fa-google" style="color:yellowgreen"></i></span> Sign up with Google</button></a>  </div>
-    <div class="bars" > <a href="#"><button><span id="apple-line"><i class="fa-brands fa-apple"></i> Sign up With Apple</span></button></a> </div> 
+       <div class="bars"><a href="#"><button><span><i class="fa-brands fa-google" style="color:yellowgreen"></i></span> Sign in with Google</button></a>  </div>
+    <div class="bars" > <a href="#"><button><span id="apple-line"><i class="fa-brands fa-apple"></i> Sign in With Apple</span></button></a> </div> 
     </div>
-    <form>
-        <input type="text" placeholder="  Phone, email or username">
+    <form action="#">
+       <label class="inputBox">
+        <input type="text" id="inputText" class="output" placeholder="  Phone or email">
+        
+    <span class="inputChecker "></span>
+    </label>
     </form>
     <div class="ori-zontal">
         <img src="../Images/twitter-lines.png"><h2>Or</h2>
         <img src="../Images/twitter-lines.png">
     </div>  
     <div class="bottombars-container">
-    <div class="bars"><a href="#"><button class="one">Next</button></a></div>
+    <div class="bars needs"><a href="../Html/password-phase.html"><button class="one">Next</button></a></div>
     <div class="bars"><a href="#"><button>Forgot password?</button></a></div>
     </div>
     <h2 class="bottom-line">Don't have an account? <a href="../../index.html">Sign up</a>
     </h2>
     </div>
     </section>
+    <script type="module" src="../Script/input-validator.js"></script>
+    
 </body>
+
 </html>
