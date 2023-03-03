@@ -47,6 +47,7 @@ inputs.addEventListener('input',()=> {
         /*Hallelujah, it works
         I initially tried to export out the value of inputs, but it was laid in my mind to try use localStorage and it worked */
         localStorage.setItem('data', getInput);
+        /*This transfers the user's details over to the next page so that the user dosen't have to enter the same thing twice */
         
         
         
