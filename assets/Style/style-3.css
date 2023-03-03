@@ -39,11 +39,12 @@ body{
     row-gap: 20px;
     }
     form input{
-        padding-block: 10px;
+        padding-block: 12px;
         width: 100%;
         border: 2px solid lightgray;
         border-radius: 4px;
         margin-bottom: 2px;
+        
     }
 
     form a{
@@ -55,15 +56,14 @@ body{
 }
 
     
-label.blind::before{/*css to hide passwordr,this is so pointless cos there's literally nothing to show here*/
-    content: "";
-    background: url(../Images/eye-slash.png);
-    background-size: cover;
-    position: absolute;
-    right: 15%;
-    margin-top: 10px;
-    height: 1.3rem;
-    width:1.9rem;
+.toggleVisibility{/*css to hide password,this is so pointless cos there's literally nothing to show here
+    plus it's super buggy, but I'm a beginner*/
+       position: absolute;
+    right: 13%;
+    margin-top: 1px;
+    height: 2.6rem;
+    width:1.8rem;
+    border: none;
 }
 
 
@@ -147,4 +147,7 @@ label.blind::before{/*css to hide passwordr,this is so pointless cos there's lit
         color:black;
         font-weight: 900;
     }
+
+   
+    
     }
