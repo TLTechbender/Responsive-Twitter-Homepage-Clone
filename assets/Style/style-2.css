@@ -73,7 +73,46 @@ form input{
     width: 100%;
     border: 2px solid lightgray;
     border-radius: 4px;
+    margin-bottom: 2px;
 }
+/*The section below is for validation of input*/
+label.valid .inputChecker{
+    color:green;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+label.invalid .inputChecker{
+    color:red;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+label.valid::before{
+  content:"";
+ 
+background-image: url(../Images/check-mark.jpeg);
+ background-size: cover;
+ position: absolute;
+ right: 15%;
+ margin-top: 10px;
+ height: 1rem;
+width:1rem;
+}
+
+label.invalid::before{
+    content:"";
+    background-image: url(../Images/wrong-mark.jpeg);
+    background-size: cover;
+    position: absolute;
+    right: 15%;
+    margin-top: 10px;
+    height: 1rem;
+   width:1rem;
+}
+/*The section above is for validation of input*/
 .signup-container p{
     margin-block: 10px 30px;
 }
@@ -99,6 +138,14 @@ color:white;
 font-weight: 700;
 }
 
+ .hidden{/*This allows me to disable "Next button" */
+    background-color: grey;
+
+}
+.special{ /*This disables the link, even though I am using Js to disable the button, 
+    the link is still in a active state, thats why I am using this*/
+    pointer-events: none;
+}
 @media (min-width:768px){ /*for larger screen sizes*/
     section{
         border: 10px solid white;
@@ -125,11 +172,21 @@ font-weight: 700;
     h2, p{
         color: grey;
     }
+    
+    h1{
+        color:black;
+        font-weight: 900;
+    }
 }
 
 @media (min-width:1750px){
     .signup-container{
     flex-grow: 4;
     scale:2.4;
+    }
+    
+    h1{
+        color:black;
+        font-weight: 900;
     }
 }
