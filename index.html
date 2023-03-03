@@ -26,19 +26,32 @@
         <h1>Join Twitter today</h1>
 
         <div class="topbars-container">
-   <div class="bars"><a href="#"><button><span><i class="fa-brands fa-google" style="color:yellowgreen"></i></span> Sign up with Google</button></a>  </div>
-<div class="bars" > <a href="#"><button><span id="apple-line"><i class="fa-brands fa-apple"></i> Sign up With Apple</span></button></a> </div> 
+   <div class="bars"><a href="#"><button onclick="pop();return false;" id="popper"><span><i class="fa-brands fa-google" style="color:yellowgreen"></i></span> Sign up with Google</button></a>  </div>
+<div class="bars" > <a href="#"><button onclick="pop();return false;" id="popper"><span id="apple-line"><i class="fa-brands fa-apple"></i> Sign up With Apple</span></button></a> </div> 
 
 </div>
 <div class="ori-zontal">
     <img src="./assets/Images/twitter-lines.png"><h2>Or</h2>
     <img src="./assets/Images/twitter-lines.png">
 </div>  
-<div class="bars"><a href="#"><button class="one">Create account</button></a></div>
+<div class="bars"><a href="#"><button onclick="pop();return false;" class="one" id="popper">Create account</button></a></div>
 <p>By signing up, you agreee to the <a href="#">Terms of service</a> and <a href="#">Privacy Policy</a>, including <a href="#">Cookie use</a></p>
 <h2>Have an account already? <a href="./assets/Html/login.html">Log in</a>
 </h2>
 </div>
 </section>
+
+<div class="popup1" id="popup1">
+<img alt="tick" src="./assets/Images/The-Coveted-Twitter-Verification-Tick-is-Back-after-Three-Years.png">
+<p class="text">Welcome to my funny twitter clone page 🤝 </p>
+<button class="actionBtn" id="actionBtn">Let's go!</button>
+</div>
+
+<div class="popup2" id="popup2">
+<h1>OOPS</h1>
+<p>All the bottons on this page are for show 😂, Please 🙏  proceed to login</p>
+<button id="cancel">Got that!</button>
+</div>
+<script src="./assets/Script/popup-handler.js"></script>
 </body>
 </html>
