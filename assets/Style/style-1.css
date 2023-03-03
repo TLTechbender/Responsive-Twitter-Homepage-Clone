@@ -10,7 +10,9 @@ body{
    flex-direction: row;
    place-items: center;
    
+   
 }
+
 .fa-twitter{
     color:blue;
     margin:  auto;
@@ -23,6 +25,7 @@ body{
     max-width:475px;
     padding-inline: 20px;
     display: grid;
+    visibility: hidden;
     
    }
 
@@ -81,11 +84,127 @@ a{
     color:white;
     font-weight: 700;
     }
+
+    .popup1{
+        position: absolute;
+        top:0;
+        left:50%;
+        transform: translate(-50%,-50%) scale(0.1);
+        width: 250px;
+        height: 180px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid grey;
+        border-radius: 20px;
+        z-index: 30;
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+        
+    }
+.popup1 img{
+    width: 250px;
+    height: 150px;
+    margin-top: -240px;
+    border-radius: 20px;
+    padding-top: 15px;
+    
+}
+
+.popup1 p{
+    position: absolute;
+    color: grey;
+    font-weight: 600;
+
+}
+
+.popup1 button{
+    position: absolute;
+    margin-top: 90px;
+    border-radius: 40px;
+    padding-inline: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     color: black;
+     background-color:lightblue;
+     font-weight: 900;
+     border: none;
+     cursor:pointer;
+}
+
+.show-popup1{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+}
+ 
+
+ .popup2{
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%)scale(0.1) ;
+    width: 250px;
+    height: 260px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid grey;
+    border-radius: 20px;
+    z-index: 60;
+    
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+ }
+
+ .popup2 h1 ,p{
+    font-weight: 600;
+    color: black;
+ }
+
+ .popup2 h1{
+font-family: cursive;
+font-size: 2rem;
+position: absolute;
+margin-top: -100px;
+ }
+
+ .popup2 p{
+    position: absolute;
+    margin-top: 25px;
+    width: 160px;
+ }
+
+ .popup2 button{
+    background-color: green;
+    color:white;
+    font-weight: 900;
+    position: absolute;
+    margin-top: 180px;
+    border-radius: 40px;
+    padding-inline: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 75px; 
+    border: none;
+     cursor:pointer;
+}
+
+.show-popup2{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%,-50%) scale(1);
+}
 @media (min-width:768px){ /*for larger screen sizes*/
     section{
         border: 10px solid white;
         color: white;
         flex-grow: 4;
+        border-radius: 30px;
+       
     }
 
     body{
@@ -112,7 +231,15 @@ a{
         color:black;
         font-weight: 900;
     }
+    .popup1{
+        width: 400px;
+        height: 200px;
+        
+        
+    }
 }
+
+
 
 @media (min-width:1750px){
     .signup-container{
