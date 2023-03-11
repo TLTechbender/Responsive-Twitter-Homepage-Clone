@@ -8,6 +8,7 @@ window.addEventListener('load', ()=>{
     
 });
 
+
 const showPage =document.querySelector('.signup-container');
 
 document.querySelector('#actionBtn').addEventListener("click", function(){

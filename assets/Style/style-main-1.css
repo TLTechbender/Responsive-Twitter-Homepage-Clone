@@ -16,9 +16,21 @@ body{
     scrollbar-width: none;  
 }
     
+
+.left-section{
+    visibility: none;
+    position: absolute;
+    display: none;
+}
+
+.right-section{
+    visibility: none;
+    position:absolute;
+    display: none;
+}
    
 
-   section{
+   .middle-section{
     padding-inline:10px;
     margin: 0 auto;
     margin-top: 15px;
@@ -241,17 +253,17 @@ cursor: pointer;
 
     .sticky{
         position: fixed;
+        width: 100%;
         display: flex;
         justify-content: space-around;
         border-bottom: 1px solid var(--twitter-background);
         z-index: 8000;/*ridiculous*/
         top:0;
         left: 0;
-        width: 100%;
         padding-top: 30px;
         padding-bottom:20px;
         margin-bottom: 8px;
-      
+      /*I honestly don't think Grid is a fan of fixed position elements*/
     }
 
     .push-down{
@@ -263,6 +275,9 @@ cursor: pointer;
         visibility: hidden;
     }
 
+    .for-big-screens{
+        display: none;
+    }
     article{
        
                
@@ -293,6 +308,7 @@ cursor: pointer;
      width:46.5px;
      border: 1px solid red;
      clip-path: circle(); /* This is better than setting an unholy amount of border radius 😂  */ 
+     justify-self: center;
  }
  p.time{
      justify-self: center;
@@ -392,4 +408,376 @@ cursor: pointer;
 .load-more:hover{
     transform: scale(1.5);
 }
+
+
+/*This media query is for very big screens*/
+@media screen and (min-width:1005px) {
+   
+.avatar-button img{
+    display: none;
+}
+
+    .whole-page{
+        display:grid;
+        grid-template-columns: 1fr 2fr 1.5fr;
+        padding-inline: 5%;
+        
+        
+        
+    }
+
+    .left-section{
+        visibility: visible;
+        display: unset;
+        grid-column-start: 1;
+        position: unset;
+        margin-top: 15px;
+        width: 85%;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 10%;
+        height: 100vh;
+        overflow: hidden;
+        
+        
+        
+    }
+
+   
+    .right-section{
+        visibility: visible;
+        display: unset;
+        grid-column-start: 3;
+        position: unset;
+        margin-top: 15px;
+        padding-inline: 16px;
+        width: 80%;
+        height: 100vh;
+        margin-right: 13%;
+        font-family: 'Roboto', sans-serif;
+        overflow: hidden;
+    }
+
+    .bandAid-stick{
+        position: sticky;
+        top:5rem;
+    }
+    .bottom-buttons{
+        display:none;
+    }
+
+    body .middle-section{
+        grid-column-start: 2;
+        position: unset;
+        border-left: 1px solid var(--twitter-background);
+        border-right: 1px solid var(--twitter-background);
+        overflow-y: scroll;
+
+        
+    }
+
+    .for-big-screens{
+        display: unset;
+        font-family: 'Roboto', sans-serif;
+      border-bottom: 1px solid var(--twitter-background);  
+    }
+
+    .for-big-screens .top-layer{
+        display: flex;
+    }
+ 
+      
+     .for-big-screens .bottom-layer{
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 8px;
+        margin-top: 12px;
+     }
+
+     .bottom-layer .inner-left{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+     }
+     .inner-left i{
+        color: var(--twitter-color);
+       
+     }
+
+     .top-layer img{
+        height: 40px;
+        width: 40px;
+        clip-path: circle();
+     }
+    .top-layer p{
+        margin-left: 15px;
+        color: grey;
+        font-size: 1.6rem;
+    }
+
+    .bottom-layer .tweet-button{
+     width: 80px;
+     border-radius: 20px;
+     padding-block: 8px;
+     border: none;
+     background-color: var(--twitter-color);
+    }
+   .left-section .fa-twitter{
+    position: relative;
+    color: var(--twitter-color);
+    font-size: 24px;
+   }
+   
+   .level-2{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 38px;
+    
+   }
+
+   .logos, .logo-description {
+     display: flex;
+     flex-direction: column;
+    
+   }
+
+   .logo-description{
+    margin-left: 20px;
+   }
+
+   .left-section-tweet-button{
+    
+    width: 74%;
+    border-radius: 20px;
+    padding-block: 9px;
+    margin-top: 12px;
+    background-color: var(--twitter-color);
+    color: var(--twitter-background);
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+}
+    
+   
+   .last-item-left-container img{
+    clip-path: circle();
+    height: 40px;
+    width: 40px;
+    grid-row-start: 1;
+    grid-row-end: 3;  
+    cursor: pointer; 
+}
+
+   .last-item-left-container{
+    display: flex;
+    margin-top: 80%;
+
+    
+   }
+ .last-item-left-container .left-side{
+    display: grid;
+    grid-template-rows:repeat(2,1fr);
+    grid-template-columns: 0.7fr 1fr;
+    cursor: pointer;
+ }
+
+  .logos i{
+    padding-block: 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+ }
+
+ .logos i:hover{
+    background-color: var(--twitter-background);
+ }
+.logo-description p{
+    padding-block: 10.5px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.logo-description p:hover{
+    background-color: var(--twitter-background);
+}
+
+ .last-item-left-container .right-side{
+    position: relative;
+    transform: translateY(30%);
+    cursor: pointer;
+ }
+
+
+ 
+     form{
+   display: flex;
+   padding-block:10px;
+   padding-inline: 8px;
+   border: 1px solid var(--twitter-background);
+   background-color: lightgray;
+   border-radius: 20px;
+   text-align: center;
+   align-items: center;
+   font-family: 'Roboto', sans-serif;
+ }
+
+ .input-text{
+   margin-left: 28px;
+   border:none;
+   background: transparent;
+   outline: none;
+ }
+
+ .fa-magnifying-glass{
+   color:grey;
+   border: none;
+   background: transparent;
+ }
+
+ .middle-cont{
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    border-radius: 20px;
+    margin-top: 20px;
+    background: transparent;
+    background-color: grey ;
+    
+
+ }
+ .lil-boxes{
+    padding-block: 10px;
+ }
+
+ .lil-boxes{display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: 0.9fr 0.1fr;
+}
+.lil-boxes i{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    justify-self: end;
+}
+.lil-boxes p{
+    grid-row-start: 2;
+    font-size: 1.3rem;
+}
+
+.lil-boxes .last-item{
+grid-row-start: 3;
+grid-column-start:1;
+}
+
+.lil-boxes h4{
+    color:gray;
+}
+
+.message-box{
+    position: fixed;
+    height: 80px;
+    width: 300px;
+    right: 11rem;
+    bottom:0;
+    z-index: 3000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-box:hover{
+    cursor: pointer;
+}
+.message-box i, .message-box h2{
+    background: transparent;
+    font-size: 2rem;
+    padding-inline: 4px;
+}
+
+}
+/*End of media query*/
+
+/*For small tablets*/
+@media  (min-width:500px) and (max-width:1004px) {
+   .avatar-button img{
+    display: none;
+   }
+    .left-section{
+        visibility: visible;
+        display: unset;
+        margin-top: 65px;
+        width:fit-content;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 10%;
+        
+        overflow: hidden;
+        position: fixed;
+        /*I honestly don't know what is going on here*/
+        
+    }
+   .whole-page{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+   }
+.bottom-buttons{
+    display: none;
+}
+.middle-section{
+    grid-column-start: 2;
+}
+.left-section .logos{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+   
+}
+.logos i{
+    padding-block: 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-block: 10px;
+    
+ }
+.left-section .fa-twitter{
+    color: var(--twitter-color);
+    font-size: 24px;
+}
+ .logos i:hover{
+    background-color: var(--twitter-background);
+ }
+
+.left-section .logo-description{
+    display: none;
+}
+.last-item-left-container img{
+    height: 40px;
+    width: 40px;
+    clip-path: circle();
+    margin-top: 30px;
+}
+ 
+.last-item-left-container .left-side p{
+    display: none;
+}
+.last-item-left-container .right-side i{
+    display: none;
+}
+.left-section-tweet-button{
+    
+    border-radius: 20px;
+    padding-block: 9px;
+    
+    background-color: var(--twitter-color);
+    color: var(--twitter-background);
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    
+}
+}
+
+
 

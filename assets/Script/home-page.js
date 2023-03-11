@@ -150,4 +150,15 @@ function upTown(){
 */
 }
 
+
+/*Another band aid solution to things a lil bit responsive*/
+const leftSection = document.querySelector('.left-section');
+const rightSection =document.querySelector('.right-section')
+window.addEventListener('scroll', ()=>{
+    leftSection.classList.toggle('bandAid-stick', window.scrollY >115);
+     rightSection.classList.toggle('bandAid-stick', window.scrollY>105);
+    /* 😂 😂 😂 */
  
+});
+    
+
